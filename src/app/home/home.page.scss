@@ -1,0 +1,125 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+.button-group {
+  display: flex;
+
+  gap: 1rem; /* Espacio entre los botones */
+  justify-content: center; /* Centrar los botones horizontalmente */
+}
+.content-container {
+  display: flex;
+  align-items: flex; /* Alinea el contenido en la parte superior */
+}
+
+.text-content {
+  flex: 1; /* Ocupa el espacio disponible para el texto */
+}
+
+
+.image-col {
+  display: flex;
+   /* Alinea la imagen a la derecha dentro de la columna */
+  align-items: center; /* Centra verticalmente la imagen */
+}
+
+.map-image {
+  width: 100%; /* Ocupa todo el ancho de la columna */
+  max-width: 450px; /* Ajusta el ancho máximo para la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Redondea las esquinas de la imagen */
+}
+.letra{
+  font-size: 1.2rem;
+
+}
+.titulo{
+  font-size: 3.2rem;
+
+}
+
+
+.modificar {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos hijos en el centro */
+}
+
+.titulo {
+  text-align: center; /* Centra el texto del título */
+}
+
+.map {
+  max-width: 100%; /* Asegúrate de que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+.margen{
+  border: 1px solid rgb(25, 243, 43); /* Borde verde de 5 píxeles */
+  margin: 20px; /* Margen del elemento */
+  padding: 10px; /* Espaciado interno del elemento */
+}
+.marge{
+  border: 1px solid rgb(238, 0, 0); /* Borde verde de 5 píxeles */
+  margin: 20px; /* Margen del elemento */
+  padding: 10px; /* Espaciado interno del elemento */
+}
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  margin: 10px; /* Margen exterior */
+}
+
+.checkbox-input {
+  display: none; /* Oculta el checkbox original */
+}
+
+.checkbox-label {
+  position: relative;
+  padding-left: 30px; /* Espacio para el checkbox */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.checkbox-label::before {
+  content: ""; /* Contenido vacío para crear el checkbox */
+  position: absolute;
+  left: 0; /* Posición del checkbox */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajusta el centrado */
+  width: 20px; /* Ancho del checkbox */
+  height: 20px; /* Altura del checkbox */
+  border: 2px solid #007BFF; /* Borde azul */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #f0f8ff; /* Color de fondo suave */
+  transition: background-color 0.2s, border-color 0.2s; /* Transiciones suaves */
+}
+
+/* Estilo cuando el checkbox está marcado */
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: #007BFF; /* Cambia el fondo cuando está marcado */
+  border-color: #0056b3; /* Cambia el borde cuando está marcado */
+}

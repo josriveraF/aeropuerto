@@ -1,0 +1,7 @@
+{
+  "name": "aeropuerto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

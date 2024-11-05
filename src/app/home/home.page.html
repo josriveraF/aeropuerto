@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Viaje Transfer - Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <!-- Botones superiores -->
+  <div class="button-group" >
+    <ion-button color="primary">Mostrar Viajes</ion-button>
+    <ion-button color="success">Crear Viaje</ion-button>
+  </div>
+  <ion-card-content *ngIf="vista">
+    <div class="modificar" >
+      <ion-col size="12">
+        <ion-grid>
+          <ion-row >
+            <ion-col size="12" >
+              <h1 class="titulo"><strong>código qr</strong></h1>
+            </ion-col>
+            <ion-col size="12">
+              <img src="assets/scaner.png" alt="Mapa de ruta" class="map" />
+              <ion-text color="primary" style="text-align: center;">
+                <h1>N° Codigo</h1>
+              </ion-text>
+              <ion-input type="text" style="text-align: center;" class="letra" placeholder="ingrese su codigo"></ion-input>
+              <ion-button (click)="vistaa()" expand="block" fill="clear" shape="round">
+                enviar
+              </ion-button>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+        <ion-col  style=" justify-content: center; align-items: center;">
+       
+        </ion-col>
+        
+      </ion-col>
+    </div>
+  </ion-card-content>
+  
+
+  <!-- Información del viaje -->
+  <ion-card *ngIf="!vista">
+    <ion-card-header color="medium">
+      <ion-card-title>Mejor ruta de preferencia: seguirla</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="margen" *ngIf="borrar1">
+      <ion-grid>
+        <ion-row>
+          <!-- Columna de texto ocupando 6 columnas -->
+          <ion-col size="6" class="letra">
+            <p  class="letra"><strong>Idiomas:</strong> inglés, español</p>
+            <p  class="letra"><strong>Pasajero:</strong> Nº 221</p>
+            <p  class="letra"><strong>Cupos:</strong> 3 acompañantes</p>
+            <p  class="letra"><strong>Destino:</strong> Duoc Maipú #1223</p>
+            <p  class="letra" ><strong>Hora de salida:</strong> 14:00</p>
+            <div class="checkbox-container">
+              <input type="checkbox" (click)="vista2()"   id="checkbox" class="checkbox-input">
+              <label for="checkbox" class="checkbox-label">Eliminar</label>
+          </div>
+          </ion-col>
+    
+          <!-- Columna de imagen ocupando 6 columnas -->
+          <ion-col size="6" class="image-col">
+            <img src="assets/map.png" alt="Mapa de ruta" class="map-image" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <div class="marge" *ngIf="!eliminaa">
+      <ion-card-header color="medium">
+        <ion-card-title>Eliminar Viaje</ion-card-title>
+       
+      </ion-card-header>
+      <ion-text>
+        <h3><strong>Comentario</strong></h3>
+       </ion-text>
+       <ion-input type="texto" placeholder="descripcion del problema"></ion-input>
+       <ion-button (click)="Eliminar1()"  expand="block" fill="clear" shape="round">
+        Eliminar
+       </ion-button>
+       </div>
+    
+    <ion-card-content class="margen" *ngIf="borrar2">
+      <ion-grid>
+        <ion-row>
+          <!-- Columna de texto ocupando 6 columnas -->
+          <ion-col size="6" class="letra">
+            <p  class="letra"><strong>Idiomas:</strong> inglés, español</p>
+            <p  class="letra"><strong>Pasajero:</strong> Nº 222</p>
+            <p  class="letra"><strong>Cupos:</strong> 2 acompañantes</p>
+            <p  class="letra"><strong>Destino:</strong>  Maipú #1223</p>
+            <p  class="letra" ><strong>Hora de salida:</strong> 14:00</p>
+            <div class="checkbox-container">
+              <input type="checkbox" (click)="vista3()"  id="checkbox" class="checkbox-input">
+              <label for="checkbox" class="checkbox-label">Eliminar</label>
+          </div>
+          
+          </ion-col>
+
+    
+          <!-- Columna de imagen ocupando 6 columnas -->
+          <ion-col size="6" class="image-col">
+            <img src="assets/map.png" alt="Mapa de ruta" class="map-image" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <div class="marge" *ngIf="!eliminaa2">
+      <ion-card-header color="medium">
+        <ion-card-title>Eliminar Viaje</ion-card-title>
+       
+      </ion-card-header>
+      <ion-text>
+        <h3><strong>Comentario</strong></h3>
+       </ion-text>
+       <ion-input type="texto" placeholder="descripcion del problema"></ion-input>
+       <ion-button (click)="Eliminar2()"  expand="block" fill="clear" shape="round">
+        Eliminar
+       </ion-button>
+       </div>
+      
+  
+<ion-card-content>
+
+
+      <!-- Botones de acción -->
+      
+      <ion-button color="medium" expand="block">Modificar Viaje</ion-button>
+      <ion-button color="warning" expand="block">Iniciar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
